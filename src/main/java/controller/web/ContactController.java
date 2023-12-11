@@ -16,7 +16,12 @@ import java.util.Properties;
 
 @WebServlet(name = "contactController", value = "/contact")
 public class ContactController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         request.setAttribute("pageName", "Liên Hệ");

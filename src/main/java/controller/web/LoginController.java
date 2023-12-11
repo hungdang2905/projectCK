@@ -15,7 +15,12 @@ import java.util.UUID;
 
 @WebServlet(name = "loginController", value = "/login")
 public class LoginController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         LoginService.login(request, response);

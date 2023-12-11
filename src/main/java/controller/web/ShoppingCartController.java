@@ -16,7 +16,12 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "shoppingCartController", value = "/shopping-cart")
 public class ShoppingCartController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         HttpSession session = request.getSession();

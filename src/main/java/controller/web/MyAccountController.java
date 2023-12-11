@@ -28,7 +28,12 @@ import java.util.UUID;
 @WebServlet(name = "myAccountController", value = "/my-account")
 @MultipartConfig()
 public class MyAccountController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         request.setAttribute("pageName", "Tài khoản");

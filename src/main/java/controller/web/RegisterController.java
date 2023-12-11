@@ -14,7 +14,12 @@ import java.io.IOException;
 
 @WebServlet(name = "registerController", value = "/register")
 public class RegisterController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         String firstName = request.getParameter("first-name");

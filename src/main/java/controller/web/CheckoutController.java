@@ -19,7 +19,12 @@ import java.io.IOException;
 
 @WebServlet(name = "checkoutController", value = "/checkout")
 public class CheckoutController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         LoginService.login(request, response);

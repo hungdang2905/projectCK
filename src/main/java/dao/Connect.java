@@ -18,7 +18,7 @@ public class Connect {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url,userName,password);
         } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+         
         }
     }
 
@@ -37,6 +37,9 @@ public class Connect {
         return this.connection;
     }
     public static void main(String[] args) {
+    	  Connect connection =new Connect();
+    	  System.out.println(connection.getConnection());
+    	
     	
 	}
 }

@@ -13,7 +13,12 @@ import java.io.IOException;
 
 @WebServlet(name = "forgotPassController", value = "/forgot-pass")
 public class ForgotPassController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         request.setAttribute("pageName", "Quên mật khẩu");
