@@ -1,3 +1,4 @@
+
 package controller.web;
 
 import Services.LoginService;
@@ -12,7 +13,12 @@ import java.io.IOException;
 
 @WebServlet(name = "aboutUsController", value = "/about-us")
 public class AboutUsController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         request.setAttribute("pageName", "Chúng tôi");

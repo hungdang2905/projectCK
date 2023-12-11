@@ -16,7 +16,12 @@ import java.util.List;
 @WebServlet(name = "singleProductController", value = "/single-product")
 public class SingleProductController extends HttpServlet {
 
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         String productId = request.getParameter("productId");

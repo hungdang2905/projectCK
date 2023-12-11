@@ -21,7 +21,12 @@ import java.util.List;
 
 @WebServlet(name = "shopController", value = "/shop")
 public class ShopController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         String indexPage = request.getParameter("page");

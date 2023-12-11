@@ -14,7 +14,12 @@ import java.io.IOException;
 @WebServlet(name = "confirmController", value = "/confirm")
 public class ConfirmController extends HttpServlet {
 
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LoginService.login(request, response);
         long id = Long.parseLong(request.getParameter("id"));

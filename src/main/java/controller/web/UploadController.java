@@ -14,7 +14,12 @@ import java.nio.file.Paths;
 @WebServlet(name = "upload", value = "/upload")
 @MultipartConfig()
 public class UploadController extends HttpServlet {
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("pageName", "Upload");
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/upload.jsp");
